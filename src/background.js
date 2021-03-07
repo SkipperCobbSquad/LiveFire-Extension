@@ -16,7 +16,7 @@ chrome.runtime.onMessage.addListener((req, sender, send) => {
     }
   } else if (req.status === 'quest') {
     if (socket.connected) {
-      socket.emit('quest', req.questId, req.rawQuest);
+      socket.emit('quest', req.rawQuest);
     }
   }
   console.log(req);

@@ -5,6 +5,8 @@ if (window.location.pathname === '/exam/LoadTestStart.html') {
 
 if (document.querySelector('.question-area')) {
   const raw = document.querySelector('.question-area');
-  const id = document.querySelector('.answer_container').children[1].getAttribute('for').split('_')[1]
-  chrome.runtime.sendMessage({ status: 'quest', questId: id , rawQuest: raw.innerHTML});
+  chrome.runtime.sendMessage({
+    status: 'quest',
+    rawQuest: raw.innerHTML,
+  });
 }
