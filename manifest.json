@@ -1,7 +1,7 @@
 {
   "name": "Live Fire",
   "description": "Live Fire for test getter",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "manifest_version": 2,
   "content_scripts": [
     {
@@ -15,13 +15,13 @@
       "all_frames": true
     }
   ],
-  "browser_action": {
-    "default_popup": "popup.html"
-  },
   "background": {
     "scripts": [
       "./dist/background.bundle.js"
     ]
+  },
+  "browser_action": {
+    "default_popup": "./src/popup.html"
   },
   "icons": {
     "16": "icons/antitestportal16.png",
