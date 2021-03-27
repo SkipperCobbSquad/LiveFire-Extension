@@ -7,6 +7,9 @@ let currentTest;
 
 socket.on('connect', () => {
   console.log('Hello');
+  if (currentTest) {
+    socket.emit('setTestID', currentTest);
+  }
 });
 
 socket.on('answers', (answ) => {

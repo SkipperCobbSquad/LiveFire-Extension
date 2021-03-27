@@ -5,6 +5,7 @@ module.exports = {
   entry: {
     background:  './src/background.js',
     foreground: './src/foreground.js',
+    styler: './src/styler.js'
   },
   output: {
     filename: '[name].bundle.js',

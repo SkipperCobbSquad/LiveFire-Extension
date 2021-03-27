@@ -1,7 +1,7 @@
 {
   "name": "Live Fire",
   "description": "Live Fire for test getter",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "manifest_version": 2,
   "content_scripts": [
     {
@@ -10,7 +10,8 @@
         "https://*.testportal.net/exam/*"
       ],
       "js": [
-        "./dist/foreground.bundle.js"
+        "./dist/foreground.bundle.js",
+        "./dist/styler.bundle.js"
       ],
       "all_frames": true
     }
