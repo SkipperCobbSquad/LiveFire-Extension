@@ -10,3 +10,9 @@ if (document.querySelector('.question-area')) {
     rawQuest: raw.innerHTML,
   });
 }
+
+chrome.runtime.onMessage.addListener((req, sender, send)=>{
+  console.log(req);
+  document.querySelector('.question-area').style.border = '10px solid #fff';
+  send('ok')
+})

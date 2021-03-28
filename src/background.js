@@ -14,6 +14,12 @@ socket.on('connect', () => {
 
 socket.on('answers', (answ) => {
   console.log(answ);
+  // chrome.runtime.sendMessage(answ)
+  chrome.tabs.query({active: true}, function(tabs) {
+    const to = tabs.find(a => a.url = "https://www.testportal.net/exam/DoStartTest.html");
+    console.log(to.id);
+    chrome.tabs.sendMessage(to.id, answ);
+  });
 });
 
 chrome.runtime.onMessage.addListener((req, sender, send) => {
